@@ -163,10 +163,10 @@ let x = document.querySelector('.slider__element').getBoundingClientRect();
             element[0].style.transition='transform 0.3s ease-in-out';
             element[0].style.transform='translateX('+ 0 + 'px)';
         }, 1);
-        setTimeout(() => {
-            element[1].style.transition='transform 0.3s ease-in-out';
-            element[1].style.transform='translateX('+ 0 + 'px)';
-        }, 1);
+        // setTimeout(() => {
+        //     element[1].style.transition='transform 0.3s ease-in-out';
+        //     element[1].style.transform='translateX('+ 0 + 'px)';
+        // }, 1);
         dem=0;
         if(document.querySelector('.active__circle') !==null){
             document.querySelector('.active__circle').classList.remove('active__circle');
@@ -209,13 +209,13 @@ setInterval(() => {
         setTimeout(() => {
             element[2].style.transition='transform 0.3s ease-in-out';
             element[2].style.transform='translateX(-'+ x.width + 'px)';
-        }, 20);
+        }, 2);
         element[1].style.transition='none';
         element[1].style.transform='translateX('+ 0 + 'px)';
         setTimeout(() => {
             element[1].style.transition='transform 0.3s ease-in-out';
             element[1].style.transform='translateX(-'+ x.width + 'px)';
-        }, 20);
+        }, 2);
         dem++;
         if(document.querySelector('.active__circle') !==null){
             document.querySelector('.active__circle').classList.remove('active__circle');
@@ -234,49 +234,49 @@ setInterval(() => {
     }
     else if(dem===2){
         element[2].style.transform='translateX(-'+ x.width*3  + 'px)';
-        element[0].style.transform='translateX('+ x.width  + 'px)';
         element[0].style.transition='none';
-        element[1].style.transform='translateX('+ x.width*2 + 'px)';
-        element[1].style.transition='none';
+        element[0].style.transform='translateX('+ x.width  + 'px)';
         setTimeout(() => {
             element[0].style.transition='transform 0.3s ease-in-out';
             element[0].style.transform='translateX('+ 0 + 'px)';
-        }, 1);
-        setTimeout(() => {
-            element[1].style.transition='transform 0.3s ease-in-out';
-            element[1].style.transform='translateX('+ 0 + 'px)';
-        }, 20);
+        }, 2);
+        element[1].style.transition='none';
+        element[1].style.transform='translateX('+ x.width*2 + 'px)';
+        // setTimeout(() => {
+        //     element[1].style.transition='transform 0.3s ease-in-out';
+        //     element[1].style.transform='translateX('+ 0 + 'px)';
+        // }, 2);
         dem=0;
         if(document.querySelector('.active__circle') !==null){
             document.querySelector('.active__circle').classList.remove('active__circle');
             radio[0].classList.add('active__circle');
         }
     }
-    else if(dem===-1){
-        element[0].style.transform='translateX('+ 0 + 'px)';        
-        element[1].style.transform='translateX(-'+ x.width*2 + 'px)';
-        element[2].style.transform='translateX(-'+ x.width*4+ 'px)';
-        dem++;
-        if(document.querySelector('.active__circle') !==null){
-            document.querySelector('.active__circle').classList.remove('active__circle');
-            radio[0].classList.add('active__circle');
-        }
-    }
-    else if(dem===-2){
-        element[0].style.transform='translateX('+ x.width*2 + 'px)';
-        element[0].style.transition='none';
-        setTimeout(() => {
-            element[0].style.transition='transform 0.3s ease-in-out';
-            element[0].style.transform='translateX('+ x.width + 'px)';
-        }, 20);
-        element[1].style.transform='translateX(-'+ x.width*2 + 'px)';
-        element[2].style.transform='translateX(-'+ x.width*2 + 'px)';
-        dem++;
-        if(document.querySelector('.active__circle') !==null){
-            document.querySelector('.active__circle').classList.remove('active__circle');
-            radio[2].classList.add('active__circle');
-        }
-    }
+    // else if(dem===-1){
+    //     element[0].style.transform='translateX('+ 0 + 'px)';        
+    //     element[1].style.transform='translateX(-'+ x.width*2 + 'px)';
+    //     element[2].style.transform='translateX(-'+ x.width*4+ 'px)';
+    //     dem++;
+    //     if(document.querySelector('.active__circle') !==null){
+    //         document.querySelector('.active__circle').classList.remove('active__circle');
+    //         radio[0].classList.add('active__circle');
+    //     }
+    // }
+    // else if(dem===-2){
+    //     element[0].style.transform='translateX('+ x.width*2 + 'px)';
+    //     element[0].style.transition='none';
+    //     setTimeout(() => {
+    //         element[0].style.transition='transform 0.3s ease-in-out';
+    //         element[0].style.transform='translateX('+ x.width + 'px)';
+    //     }, 20);
+    //     element[1].style.transform='translateX(-'+ x.width*2 + 'px)';
+    //     element[2].style.transform='translateX(-'+ x.width*2 + 'px)';
+    //     dem++;
+    //     if(document.querySelector('.active__circle') !==null){
+    //         document.querySelector('.active__circle').classList.remove('active__circle');
+    //         radio[2].classList.add('active__circle');
+    //     }
+    //}
 }, 5000);
 
 //responsive menu
