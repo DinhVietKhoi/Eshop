@@ -327,6 +327,8 @@
         width: 300%;
         display: flex;
         transition: transform 0.3s ease-in-out;
+        // overflow: hidden;
+
     }
     &__element{
         display: flex;
@@ -382,6 +384,7 @@
     }
     
     &__right{
+        padding-right: 10px;
         position: relative;
         & img:first-child{
             width: 100%;

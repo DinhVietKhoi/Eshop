@@ -209,8 +209,13 @@ setInterval(() => {
         setTimeout(() => {
             element[2].style.transition='transform 0.3s ease-in-out';
             element[2].style.transform='translateX(-'+ x.width + 'px)';
-        }, 1);
-        
+        }, 20);
+        element[1].style.transition='none';
+        element[1].style.transform='translateX('+ 0 + 'px)';
+        setTimeout(() => {
+            element[1].style.transition='transform 0.3s ease-in-out';
+            element[1].style.transform='translateX(-'+ x.width + 'px)';
+        }, 20);
         dem++;
         if(document.querySelector('.active__circle') !==null){
             document.querySelector('.active__circle').classList.remove('active__circle');
@@ -221,7 +226,6 @@ setInterval(() => {
         element[0].style.transform='translateX(-'+ x.width*2 + 'px)';        
         element[1].style.transform='translateX(-'+ x.width*2 + 'px)';
         element[2].style.transform='translateX(-'+ x.width*2 + 'px)';
-
         dem++;
         if(document.querySelector('.active__circle') !==null){
             document.querySelector('.active__circle').classList.remove('active__circle');
@@ -241,24 +245,17 @@ setInterval(() => {
         setTimeout(() => {
             element[1].style.transition='transform 0.3s ease-in-out';
             element[1].style.transform='translateX('+ 0 + 'px)';
-        }, 1);
+        }, 20);
         dem=0;
         if(document.querySelector('.active__circle') !==null){
             document.querySelector('.active__circle').classList.remove('active__circle');
             radio[0].classList.add('active__circle');
         }
-        
     }
     else if(dem===-1){
         element[0].style.transform='translateX('+ 0 + 'px)';        
-        // element[1].style.transform='translateX(-'+ x.width*2 + 'px)';
+        element[1].style.transform='translateX(-'+ x.width*2 + 'px)';
         element[2].style.transform='translateX(-'+ x.width*4+ 'px)';
-        element[1].style.transition='none';
-        element[1].style.transform='translateX('+ 0 + 'px)';
-        setTimeout(() => {
-            element[1].style.transition='transform 0.3s ease-in-out';
-            element[1].style.transform='translateX(-'+ x.widthx + 'px)';
-        }, 1);
         dem++;
         if(document.querySelector('.active__circle') !==null){
             document.querySelector('.active__circle').classList.remove('active__circle');
@@ -271,17 +268,16 @@ setInterval(() => {
         setTimeout(() => {
             element[0].style.transition='transform 0.3s ease-in-out';
             element[0].style.transform='translateX('+ x.width + 'px)';
-        }, 1);
+        }, 20);
         element[1].style.transform='translateX(-'+ x.width*2 + 'px)';
         element[2].style.transform='translateX(-'+ x.width*2 + 'px)';
-
         dem++;
         if(document.querySelector('.active__circle') !==null){
             document.querySelector('.active__circle').classList.remove('active__circle');
             radio[2].classList.add('active__circle');
         }
     }
-}, 2000);
+}, 5000);
 
 //responsive menu
 var h = 0;
