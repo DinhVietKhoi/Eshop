@@ -23,7 +23,13 @@
     .container{
         max-width: 739px;
     }
-    
+    .header__control-left{
+        display: flex;
+        flex-direction: column;
+    }
+    .header__control-link{
+        padding: 0 !important;;
+    }
     .header__middle{
         height: auto;
     }
